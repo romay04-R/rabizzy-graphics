@@ -41,9 +41,23 @@ lib/
 
 ## Deployment
 
-Push to GitHub and deploy via Vercel, or build locally:
+### GitHub Pages
+
+This project is configured for automatic deployment to GitHub Pages via GitHub Actions.
+
+1. Push your code to the `main` branch on GitHub
+2. Enable GitHub Pages in your repository settings:
+   - Go to Settings → Pages
+   - Source: Deploy from a branch
+   - Branch: `main` / `gh-pages`
+3. The workflow will automatically build and deploy on every push to `main`
+
+### Manual Deployment
+
+To build locally:
 
 ```bash
 npm run build
-npm start
 ```
+
+The static files will be in the `out/` directory.
