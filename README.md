@@ -1,60 +1,47 @@
-# Rabizzy Graphics — Portfolio Site
+# Rabizzy Graphics
 
-A Next.js 14 (App Router) + TypeScript + Tailwind CSS portfolio for Rabizzy Graphics.
+A modern design studio website built with Next.js 14, TypeScript, and Tailwind CSS.
 
-## Run it locally
+## Getting Started
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Project structure
+## Project Structure
 
 ```
 app/
-  layout.tsx      — fonts (Anton / Inter / IBM Plex Mono) + global metadata
-  page.tsx         — assembles all sections
-  globals.css       — base styles, grain texture, reveal-animation classes
+  layout.tsx      — root layout with fonts and metadata
+  page.tsx        — main page component
+  globals.css     — global styles and animations
 components/
-  Nav.tsx           — fixed nav with mobile menu
-  Hero.tsx          — tri-panel hero, mix-blend headline, mouse parallax, service ticker
-  Work.tsx          — portfolio grid (reads from lib/data.ts)
-  Services.tsx       — 4 services as spec-sheet rows
-  Education.tsx      — background / education section
-  CTA.tsx            — closing call to action
-  Footer.tsx
-  Reveal.tsx         — scroll-in-view animation wrapper (IntersectionObserver)
+  Hero.tsx        — hero section with tri-panel background and interactive effects
+  HeroArt.tsx     — abstract line-art overlay for hero
 lib/
-  data.ts            — edit this file to update projects, services, and education content
+  data.ts         — hero panel configuration and data
 ```
 
-## Hero background photography
+## Features
 
-The hero's three panels now use real photos (black marble, deep red silk,
-white flowing fabric) instead of flat colors, tinted with a brand-color
-wash and layered under a custom abstract line-art overlay
-(`components/HeroArt.tsx`). All three photos are from Unsplash and used
-under the [Unsplash License](https://unsplash.com/license) (free for
-commercial use, no attribution required) — credit goes to Annie Spratt,
-MontyLov, and Pawel Czerwinski. Swap them for your own studio photography
-any time by editing the `heroPanels` array in `lib/data.ts`.
+- **Hero Section**: Tri-panel photographic background with interactive mouse tracking
+- **Blend Mode Effects**: Headline uses mix-blend-mode for visual impact
+- **Service Ticker**: Animated marquee showcasing services
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
 
-## Where to put your own content
+## Tech Stack
 
-- **Projects** — edit the `projects` array in `lib/data.ts`. Each card currently uses a CSS
-  gradient placeholder (`gradient` field); swap that block for a real image by replacing the
-  placeholder `<div>` in `components/Work.tsx` with `next/image` pointing at a file in `/public`.
-- **Services** — edit the `services` array in `lib/data.ts`.
-- **Education / background** — edit the `education` array in `lib/data.ts`.
-- **Contact email / socials** — update the `mailto:` links in `components/CTA.tsx` and
-  `components/Footer.tsx`, and the Instagram link in `components/Footer.tsx`.
+- Next.js 14 (App Router)
+- TypeScript
+- Tailwind CSS
+- Next.js Image optimization
 
-## Deploy
+## Deployment
 
-Push to a GitHub repo and import it at https://vercel.com/new, or run:
+Push to GitHub and deploy via Vercel, or build locally:
 
 ```bash
 npm run build
