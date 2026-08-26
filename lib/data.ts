@@ -29,37 +29,37 @@ export const projects = [
     code: "01 / GD",
     tag: "Graphic Design",
     name: "Church Anniversary Flyer",
-    gradient: "linear-gradient(155deg,#000 0%, #6d001a 100%)",
+    image: "/churchflyer_design.jpg",
   },
   {
     code: "02 / BI",
     tag: "Brand Identity",
     name: "Aurum & Co. Logo System",
-    gradient: "linear-gradient(155deg,#1a1a1a 0%, #efeeea 120%)",
+    image: "/brandidentity_1.jpg",
   },
   {
     code: "03 / UX",
     tag: "UI / UX Design",
     name: "Fintra Banking App",
-    gradient: "linear-gradient(155deg,#6d001a 0%, #000 120%)",
+    image: "/waste_app.jpg",
   },
   {
     code: "04 / WD",
     tag: "Web Development",
     name: "Studio Noir E-commerce",
-    gradient: "linear-gradient(155deg,#efeeea 0%, #6d001a 130%)",
+    image: "/bodypride_design.jpg",
   },
   {
     code: "05 / GD",
     tag: "Graphic Design",
     name: "Lagos Music Fest Poster",
-    gradient: "linear-gradient(155deg,#000 0%, #333 100%)",
+    image: "/aduane_PP.jpg",
   },
   {
     code: "06 / BI",
     tag: "Brand Identity",
     name: "Verdant Cafe Rebrand",
-    gradient: "linear-gradient(155deg,#6d001a 0%, #efeeea 140%)",
+    image: "/brandidentity_2.jpg",
   },
 ];
 
@@ -106,5 +106,35 @@ export const education = [
     role: "Experience",
     meta: "Years active",
     desc: "Replace with a short line on how long you've worked with clients and the range of industries served.",
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    quote: "Rabizzy transformed our church's visual identity completely. The new branding has helped us connect with our community in ways we never thought possible.",
+    author: "Sarah Johnson",
+    role: "Church Communications Director",
+    company: "Grace Community Church",
+    projectImage: "/churchflyer_design.jpg",
+    avatar: "SJ",
+  },
+  {
+    id: 2,
+    quote: "The logo design and brand identity work exceeded all expectations. Our customers immediately noticed the difference—it elevated our entire business presence.",
+    author: "Michael Chen",
+    role: "Founder & CEO",
+    company: "Aurum & Co.",
+    projectImage: "/brandidentity_1.jpg",
+    avatar: "MC",
+  },
+  {
+    id: 3,
+    quote: "The app interface is intuitive and beautiful. User engagement increased by 40% after the redesign. Rabizzy truly understands user experience.",
+    author: "Emily Rodriguez",
+    role: "Product Manager",
+    company: "Fintra Banking",
+    projectImage: "/waste_app.jpg",
+    avatar: "ER",
   },
 ];

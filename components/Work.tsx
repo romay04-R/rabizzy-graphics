@@ -1,10 +1,11 @@
 import { projects } from "@/lib/data";
 import Reveal from "./Reveal";
+import Image from "next/image";
 
 export default function Work() {
   return (
-    <section id="work" className="py-32">
-      <div className="max-w-[1240px] mx-auto px-[6vw]">
+    <section id="work" className="relative py-32 bg-black">
+      <div className="max-w-[1240px] mx-auto px-[6vw] h-full flex flex-col justify-center">
         <Reveal>
           <div className="flex justify-between items-end gap-6 flex-wrap mb-14">
             <div>
@@ -32,9 +33,11 @@ export default function Work() {
               key={i}
               className="group relative aspect-[4/5] bg-ink overflow-hidden cursor-pointer"
             >
-              <div
-                className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-110"
-                style={{ background: p.gradient }}
+              <Image
+                src={p.image}
+                alt={p.name}
+                fill
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" />
               <span className="absolute top-4 right-4 z-10 font-mono text-[0.58rem] text-white/60">
